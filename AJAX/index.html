@@ -35,7 +35,14 @@
 
         http.send();
        // console.log(http.status,"After the Send Method is  invoked.");
-        console.log(http.readyState,"After the Send Method is  invoked.");
+        //console.log(http.readyState,"After the Send Method is  invoked.");
+
+        http.onreadystatechange= function () {
+            console.log(http.readyState,"Inside On Ready Status Change Event");
+            console.log(http.responseText);
+        }
+
+
 
         console.log("Request Finished")
 
