@@ -11,6 +11,7 @@
             background-color: rebeccapurple;
         }
     </style>
+
 </head>
 <body>
 
@@ -19,8 +20,14 @@
 
 </div>
 
-<script src="assets/jquery-3.7.1.min"></script>
+<!--<script src="assets/jquery-3.7.1.min"></script>-->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="assets/jquery-ui.min.js"></script>
+<script>
+    $( function() {
+        $( "div" ).draggable();
+    } );
+</script>
 
 </body>
 </html>
