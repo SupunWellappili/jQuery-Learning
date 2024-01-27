@@ -16,22 +16,26 @@
     $('#btn').click(function (){
       //  alert("btn click works");
         var http = new XMLHttpRequest();
-        console.log(http.status,"After the XMLHttpRequest Object Created.");
+        //console.log(http.status,"After the XMLHttpRequest Object Created.");
+        console.log(http.readyState,"After the XMLHttpRequest Object Created.");
 
         //http.open("GET","abcd");
         //http.open("GET","http://ijse,lk");
         //http.open("POST","index.html");
 
+        console.log("Request Started");
 
-        console.log("Request Started")
         http.open("GET","db/db.txt");
-        console.log(http.status,"After the Method invoked.");
+       // console.log(http.status,"After the Method invoked.");
+        console.log(http.readyState,"After the Method invoked.");
 
-        console.log(http.responseText);
-        console.log(http.status,"After the Response invoked.");
+        //console.log(http.responseText);
+       // console.log(http.status,"After the Response invoked.");
+       console.log(http.readyState,"After the Response invoked.");
 
         http.send();
-        console.log(http.status,"After the Send Method is  invoked.");
+       // console.log(http.status,"After the Send Method is  invoked.");
+        console.log(http.readyState,"After the Send Method is  invoked.");
 
         console.log("Request Finished")
 
