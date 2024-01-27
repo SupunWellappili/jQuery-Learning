@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Windows vs Document</title>
+    <style>
+        #loader_Content {
+            width: 100vw;
+            height: 100vh;
+            position: fixed;
+            background: white;
+        }
+
+        #loader_Content > img {
+            width: 500px;
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+        }
+
+    </style>
+</head>
+<body>
+<div id="loader_Content">
+    <img src="https://i0.wp.com/codemyui.com/wp-content/uploads/2017/07/fidget-spinner-loading.gif?fit=880%2C440&ssl=1">
+</div>
+<iframe src="http://techcrunch.com"></iframe>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+    $(window).on('load', function () {
+        console.log("Windows Loaded")
+
+    });
+
+    $(document).ready(function () {
+        console.log("Document Ready")
+    });
+
+    $(function () {
+        console.log("Document Loaded")
+    });
+</script>
+</body>
+</html>

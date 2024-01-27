@@ -3,8 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>jQuery - Plugin</title>
+    <style>
+        div {
+            width: 500px;
+        }
+
+        img {
+            height: 400px;
+            border: 2px rebeccapurple solid;
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
+
+<div>
+
+    <img src="assets/img/Stylish_boy.jpg">
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="assets/oridomi.min.js"></script>
+<script>
+     var folded = new OriDomi('div');
+
+      folded.accordion(30);
+     var simple = new OriDomi('div', { vPanels: [10, 10, 10, 70] });
+
+
+</script>
 
 </body>
 </html>
