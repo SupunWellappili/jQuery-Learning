@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Windows vs Document</title>
+    <link rel="stylesheet" href="assets/normalize.css">
     <style>
         #loader_Content {
             width: 100vw;
             height: 100vh;
             position: fixed;
-            background: white;
+            background: blue;
         }
 
         #loader_Content > img {
@@ -37,9 +38,11 @@
 
     });
 
+    $('#loader_Content').fadeOut(5000);
     $(document).ready(function () {
         console.log("Document Ready")
     });
+
 
     $(function () {
         console.log("Document Loaded")
