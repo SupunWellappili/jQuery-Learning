@@ -4,30 +4,62 @@
     <meta charset="UTF-8">
     <title>JQuery - UI</title>
     <link rel="stylesheet" href="assets/jquery-ui.min.css">
+    <link rel="stylesheet" href="code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+
     <style>
-        div {
-            width: 200px;
-            height: 200px;
-            background-color: rebeccapurple;
+       #draggable {
+            width: 100px;
+            height: 100px;
+            background-color: #24af13;
         }
+
+       #droppable {
+           width: 150px;
+           height: 150px;
+           padding: 0.5em;
+           float: left;
+           margin: 10px;
+           background-color: rgba(147, 53, 236, 0.41);
+       }
+
     </style>
 
 </head>
 <body>
+<!--
+<div></div>
+-->
 
+<div id="draggable" class="ui-widget-content">
+    <p>Drag me to my target</p>
+</div>
 
-<div>
-
+<div id="droppable" class="ui-widget-header">
+    <p>Drop here</p>
 </div>
 
 <!--<script src="assets/jquery-3.7.1.min"></script>-->
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <script src="assets/jquery-ui.min.js"></script>
-<script>
+
+<!--<script>
     $( "div" ).draggable();
     /*$( function() {
     } );*/
-</script>
+</script>-->
 
+<script>
+    $( function() {
+        $( "#draggable" ).draggable();
+        $( "#droppable" ).droppable({
+            drop: function( event, ui ) {
+                $( this )
+                    .addClass( "ui-state-highlight" )
+                    .find( "p" )
+                    .html( "Dropped!" );
+            }
+        });
+    } );
+</script>
 </body>
 </html>
