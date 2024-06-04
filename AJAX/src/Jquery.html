@@ -14,9 +14,18 @@
 <script>
 
     $('#btn').click(function () {
+
+        console.log("Start")
+
         $.ajax({
-            url: "db/db.txt"
+            url: "db/db.txt",
+            success:function (resp){
+                console.log(resp)
+            }
         })
+
+        console.log("End")
+
     })
 </script>
 </body>
