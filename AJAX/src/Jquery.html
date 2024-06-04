@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AJAX With jQuery</title>
+</head>
+<body>
+
+<h1>Hello Jquery...!</h1>
+<button id="btn" type="button">Save a Request</button>
+<p id="display"></p>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script>
+
+    $('#btn').click(function () {
+        $.ajax({
+            url: "db/db.txt"
+        })
+    })
+</script>
+</body>
+</html>
