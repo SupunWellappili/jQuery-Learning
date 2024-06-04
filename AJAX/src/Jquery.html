@@ -22,6 +22,10 @@
             async:false,
             success:function (resp){
                 console.log(resp)
+                $("#display").text(resp)
+            },
+            error:function (xcv){
+                console.log(xcv)
             }
         })
 
