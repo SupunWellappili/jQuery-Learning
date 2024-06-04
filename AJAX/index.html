@@ -9,34 +9,44 @@
 <h1>Hello AJAX</h1>
 <h2>Let's Implementation with XMLHTTPRequest Object</h2>
 <button id="btn" type="button">Save a Request</button>
+<p id="display"></p>
 
 <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 <!--<script src="src/assets/Jq Js.js"></script>-->
 <!--<link rel="stylesheet" href="src/assets/jquery-ui.min.css">-->
 <script>
     $('#btn').click(function () {
-        //  alert("btn click works");
+            //  alert("btn click works");
 
-        console.log("Request Start");
+            console.log("Request Start");
 
-        var http = new XMLHttpRequest();
-        console.log(http.readyState, "After the XMLHttpRequest Object Created.");
-        console.log(http.status,"initializer");
+            var http = new XMLHttpRequest();
+            console.log(http.readyState, "After the XMLHttpRequest Object Created.");
+            console.log(http.status, "Uninitialized");
 
-        http.open("Get", "db/db.txt");
-        console.log(http.readyState, "After the Open Method invoke.");
-        console.log(http.status,"Loading");
+            http.open("Get", "db/db.txt");
+            console.log(http.readyState, "After the Open Method invoke.");
+            console.log(http.status, "Loading");
 
-        console.log(http.responseText);
-        console.log(http.readyState,"After the  Response Text Printed")
+            console.log(http.responseText);
+            console.log(http.readyState, "After the  Response Text Printed")
 
-        http.send();
-        console.log(http.readyState, "After the Send Method is  invoked.");
-        console.log(http.status, "Loaded");
+            http.send();
+            console.log(http.readyState, "After the Send Method is  invoked.");
+            console.log(http.status, "Loaded");
 
-        console.log("Request Finished");
+            http.onreadystatechange = function () {
+                if (http.readyState == 4 && http.status == 200) {
+                    $("#display").text(http.responseText)
+                    console.log(http.responseText);
 
-    })
+                    console.log(http.readyState);
+                    console.log(http.status);
+
+                }
+            }
+            console.log("Request Finished");
+        });
 </script>
 </body>
 </html>
