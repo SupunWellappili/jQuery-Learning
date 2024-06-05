@@ -74,11 +74,21 @@
         $.ajax({
             url: "db/db.xml",
             success: function (resp) {
-                console.log(resp)//print the xml object
+               // console.log(resp)//print the xml object
 
                 //now convert to jQuery Object
-                var let  =$(resp).children().children(":eq(1)").find("id").text();
-                console.log(let);
+                let count = $(resp).children().children().length;
+
+                for (let i = 0; i < count; i++) {
+                    var id = $(resp).children().children().eq(i).find("id").text();
+                    var name = $(resp).children().children().eq(i).find("name").text();
+                    var address = $(resp).children().children().eq(i).find("address").text();
+                    var salary = $(resp).children().children().eq(i).find("salary").text();
+
+                    console.log(id,name,address,salary);
+                }
+
+                //console.log(let);
 
             },
             error: function (err) {
