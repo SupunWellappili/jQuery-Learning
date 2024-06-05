@@ -1,0 +1,31 @@
+<customer>
+    <customer>
+        <id>C001</id>
+        <name>Supun</name>
+        <address>Galle</address>
+        <salary>25000</salary>
+    </customer>
+
+
+    <customer>
+        <id>C002</id>
+        <name>Wellappili</name>
+        <address>Panadura</address>
+        <salary>36000</salary>
+    </customer>
+
+
+    <customer>
+        <id>C003</id>
+        <name>Kasun</name>
+        <address>Trinco</address>
+        <salary>80000</salary>
+
+
+    </customer>
+
+
+
+
+
+</customer>
