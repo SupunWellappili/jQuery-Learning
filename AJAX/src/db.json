@@ -1,0 +1,32 @@
+[
+  {
+    "id": "S001",
+    "name": "Thilak",
+    "Address": "Hambantota",
+    "salary": 10000
+  },
+  {
+    "id": "S002",
+    "name": "Mihiran",
+    "Address": "Pasikuda",
+    "salary": 120000
+  },
+  {
+    "id": "S003",
+    "name": "Sulakshana",
+    "Address": "Jaffna",
+    "salary": 80000
+  },
+  {
+    "id": "S004",
+    "name": "Hansika",
+    "Address": "Kandy",
+    "salary": 20000
+  },
+  {
+    "id": "S005",
+    "name": "Yasithimi",
+    "Address": "Nuwara",
+    "salary": 40000
+  }
+]
