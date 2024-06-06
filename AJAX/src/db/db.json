@@ -2,31 +2,31 @@
   {
     "id": "S001",
     "name": "Thilak",
-    "Address": "Hambantota",
+    "address": "Hambantota",
     "salary": 10000
   },
   {
     "id": "S002",
     "name": "Mihiran",
-    "Address": "Pasikuda",
+    "address": "Pasikuda",
     "salary": 120000
   },
   {
     "id": "S003",
     "name": "Sulakshana",
-    "Address": "Jaffna",
+    "address": "Jaffna",
     "salary": 80000
   },
   {
     "id": "S004",
     "name": "Hansika",
-    "Address": "Kandy",
+    "address": "Kandy",
     "salary": 20000
   },
   {
     "id": "S005",
     "name": "Yasithimi",
-    "Address": "Nuwara",
+    "address": "Nuwara",
     "salary": 40000
   }
 ]
