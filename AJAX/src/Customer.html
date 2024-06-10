@@ -112,10 +112,11 @@
     })
 
     //////////////////////////JSON////////////////////////////////////
-
+ //Practice JavaEE_Learning Project
     $("#btn3").click(function () {
         $.ajax({
-            url: "http://localhost:8080/cmjd/customer",
+            url: "db/db.json",
+            // url: "http://localhost:8080/cmjd/customer",
             success: function (resp) {
                 console.log(resp)
 
